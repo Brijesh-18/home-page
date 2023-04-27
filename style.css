@@ -462,7 +462,6 @@ p {
 @media (max-width: 700px) {
   #responsive-menu {
     display: none;
-    
   }
   .menu {
     position: relative;
