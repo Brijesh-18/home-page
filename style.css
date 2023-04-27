@@ -1,0 +1,517 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* background: #ee3e01; */
+  background: #4e54c8;
+}
+
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+/* menu btn */
+
+main {
+  display: flex;
+  flex-flow: column-reverse;
+  color: white;
+  width: 100%;
+  margin: 0;
+  padding-top: 100px;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero-title-primary {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 10vmin;
+  line-height: 58px;
+}
+
+.hero-title-sub {
+  margin: 0.2em 0 1em 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 4.6vmin;
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+#sharing {
+  text-decoration: none;
+}
+
+/* #sharing:hover{
+  color: white;
+} */
+
+figure {
+  text-align: center;
+}
+
+figure svg {
+  margin: 3em auto 0;
+  width: 80vw;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+iframe {
+  height: 50vw;
+  width: 91vw;
+}
+
+.section-images {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 984px) {
+  .package:hover {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .container {
+    max-width: 80vw;
+  }
+
+  .menu-container {
+    max-width: 100vw;
+  }
+
+  main {
+    flex-flow: row;
+  }
+
+  .hero {
+    margin-top: 150px;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 4em;
+    line-height: 55px;
+  }
+
+  .hero p {
+    font-size: 1.3em;
+    margin: 0.5em 0 1em 0;
+    padding: 0;
+  }
+
+  figure svg {
+    width: 500px;
+    margin: 0;
+  }
+
+  iframe {
+    height: 30vw;
+    width: 55vw;
+  }
+
+  .content {
+    padding: 0 68px 0 68px;
+    background: white;
+  }
+
+  .section-images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+/* .circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+} */
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/* ================== HEADER START ===================== */
+
+:root {
+  --black: #5a5566;
+  --light-purple: #4e54c8;
+  --purple: #9d7cea;
+  --gray-purple: #9d94b3;
+  --dark-purple: #443666;
+  font-family: "Inter", sans-serif;
+}
+
+li {
+  color: var(--black);
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  cursor: pointer;
+  color: white;
+}
+
+.menu-option,
+#sign-in,
+#sign-up {
+  position: relative;
+  margin: 10px 10px;
+  transition: 0.2s;
+}
+
+.menu-option:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.2s ease-in-out;
+}
+
+.menu-option:hover,
+#sign-in:hover,
+#sign-up:hover {
+  color: white;
+}
+
+.menu-option:hover {
+  text-shadow: 1px 0px 3px black;
+}
+
+.menu-option:hover:after {
+  width: 100%;
+}
+
+#trigram {
+  display: none;
+  font-size: 24px;
+  margin-right: 30px;
+  color: var(--dark-purple);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#logo {
+  margin-right: auto;
+  margin-left: 50px;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--gray-purple);
+  border-radius: 100%;
+  text-transform: uppercase;
+  font-family: "Azeret Mono", monospace;
+}
+
+#logo p {
+  display: table-caption;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#sign-in {
+  margin-left: auto;
+}
+
+#sign-in,
+#sign-up {
+  font-weight: 800;
+  color: var(--purple);
+  padding: 5px 10px;
+  transition: 0.2s;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+#sign-in:hover,
+#sign-up:hover {
+  background-color: var(--purple);
+}
+
+#navbar {
+  /* height: 150px; */
+}
+
+.menu {
+  background-color: var(--light-purple);
+}
+
+#sign-up {
+  margin-right: 50px;
+}
+
+#responsive-menu .menu li:nth-of-type(2) {
+  position: relative;
+}
+
+#products li {
+  color: gainsboro;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+#products li:hover {
+  color: white;
+}
+
+#responsive-menu .menu li:nth-of-type(2):hover #products {
+  display: flex;
+}
+
+#responsive-menu {
+  flex: 1;
+  display: none;
+}
+
+#responsive-menu .menu .menu-option:nth-of-type(1) {
+  margin-left: 50px;
+}
+
+#trigram:hover,
+#trigram:focus {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  #responsive-menu {
+    display: none;
+    
+  }
+  .menu {
+    position: relative;
+  }
+
+  #responsive-menu .menu li:nth-of-type(2) {
+  }
+  #trigram {
+    display: unset;
+  }
+  #trigram:focus ~ #responsive-menu {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+  #trigram:focus ~ #responsive-menu .menu {
+    background-color: var(--dark-purple);
+    flex-direction: column;
+    margin-top: 300px;
+    padding-right: 30px;
+    align-items: flex-start;
+  }
+  .menu-option p {
+    color: var(--light-purple);
+  }
+  .menu-option {
+    text-align: left;
+  }
+  #sign-in,
+  #sign-up,
+  .menu-option {
+    margin: 5px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
+    padding: 5px 10px 5px 15px;
+  }
+  #products {
+    margin-left: -107px;
+    margin-top: -20px;
+  }
+  #responsive-menu .menu li:nth-of-type(2):hover #products {
+    display: flex;
+  }
+  #responsive-menu .menu .menu-option:nth-of-type(1) {
+    margin-left: 0;
+  }
+}
+
+/* ================== HEADER END ===================== */
+
+/* ===================== FORM START =========================== */

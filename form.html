@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <!-- ================== signinBx Start ================== -->
+        <div class="user signinBx">
+          <div class="imgBx"><img src="./undraw_sign_in_.svg" alt="" /></div>
+          <div class="formBx">
+            <form action="" name="boxform" onsubmit="return validateform();">
+              <h2>Sign In</h2>
+              <input type="text" name="name" placeholder="Username" />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              />
+              <input type="submit" name="" value="Login" />
+              <p class="signup">
+                Don't have an account ?
+                <a href="#" onclick="toggleForm();">Sign Up.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <!-- ================== signinBx End ================== -->
+
+        <!-- ================== signupBx Start ================== -->
+        <div class="user signupBx">
+          <div class="formBx">
+            <form action="" onsubmit="return false;">
+              <h2>Create an account</h2>
+              <input type="text" name="name" placeholder="Username" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address "
+                required
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Create Password"
+                required
+              />
+              <!-- <input type="password" name="" placeholder="Confirm Password" /> -->
+              <input type="submit" name="" value="Sign Up" />
+              <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();">Sign in.</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx"><img src="./undraw_sign_up_.svg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+    <!-- ================== signupBx End ================== -->
+
+    <script>
+      const toggleForm = () => {
+        const container = document.querySelector(".container");
+        container.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
